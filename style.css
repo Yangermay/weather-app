@@ -1,0 +1,55 @@
+:root {
+  --bg: #f0f0f0;
+  --text: #111;
+  --card: #fff;
+}
+
+body.dark {
+  --bg: #111;
+  --text: #f0f0f0;
+  --card: #222;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  transition: background 0.3s, color 0.3s;
+}
+
+.container {
+  text-align: center;
+  padding: 2rem;
+  animation: fadeIn 1s ease-in-out;
+}
+
+input, button {
+  padding: 0.5rem;
+  margin: 1rem 0;
+}
+
+#weather {
+  background: var(--card);
+  padding: 1rem;
+  border-radius: 10px;
+  margin-top: 1rem;
+  animation: slideIn 0.5s ease;
+}
+
+.toggle-theme {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes slideIn {
+  from {transform: translateY(20px); opacity: 0;}
+  to {transform: translateY(0); opacity: 1;}
+}
