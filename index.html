@@ -1,22 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Weather App</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animated Weather App</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <div class="toggle-theme">🌓</div>
-    <h1>Weather App</h1>
-    <input type="text" id="city" placeholder="Enter city name" />
-    <button onclick="getWeather()">Get Weather</button>
-    <div id="weather">
-      <!-- Weather details will show here -->
+  <div class="weather-container">
+    <div class="search-box">
+      <input type="text" placeholder="Search city..." id="search-input">
+      <button id="search-btn">🔍</button>
     </div>
+    
+    <div class="weather-display">
+      <div id="weather-icon">☀️</div>
+      <div class="temp" id="temperature">24°C</div>
+      <div class="city" id="city-name">London</div>
+      <div class="details">
+        <div>Humidity: <span id="humidity">65%</span></div>
+        <div>Wind: <span id="wind">12 km/h</span></div>
+      </div>
+    </div>
+    
+    <!-- Rain animation container -->
+    <div class="weather-animation" id="animation-container"></div>
   </div>
-
+  
   <script src="script.js"></script>
 </body>
 </html>
+
